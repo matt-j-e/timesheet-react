@@ -48,6 +48,12 @@ const NewEntryForm = ({setResults, results}) => {
         postEntries(values);
         const newResults =[...results, values];
         setResults(newResults);
+        setValues({
+            date: "",
+            client: "",
+            project: "",
+            work: "",
+        });
     }
 
     return (

@@ -11,7 +11,7 @@ const postEntries = async (values) => {
                 work: values.work
             }
         );
-        console.log(response);
+        console.log(response.data);
     } catch (error) {
         console.log(error.response);
     }

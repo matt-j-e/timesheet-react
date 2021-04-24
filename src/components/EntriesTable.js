@@ -6,6 +6,7 @@ import "../styles/EntriesTable.css";
 
 const EntriesTable = ({ results }) => {
     console.log(results);
+    // results = results.sort((a, b) => a.id < b.id ? 1 : -1);
 
     return (
         <section className="entries-table">

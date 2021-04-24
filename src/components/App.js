@@ -10,12 +10,12 @@ function App() {
 
   useEffect(() => {
     getEntries(setResults);
-  },[]);
+  },[results.length]);
 
   return (
     <div className="App">
       <NewEntryForm setResults={setResults} results={results} />
-      <EntriesTable results={results} />
+      <EntriesTable results={results.sort((a, b) => a.id < b.id ? 1 : -1)} />
     </div>
   );
 }
