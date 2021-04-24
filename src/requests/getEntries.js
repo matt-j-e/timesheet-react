@@ -1,15 +1,10 @@
 import axios from "axios";
 
 const getEntries = async (setResults) => {
-    try {
-        const response = await axios.get(
-            "http://localhost:4000/entries/"
-        );
-        // console.log(response.data);
-        setResults(response.data);
-    } catch (error) {
-        console.log(error.response);
-    }
+    const response = await axios.get(
+        "http://localhost:4000/entries/"
+    );
+    setResults(response.data);
 }
 
 export default getEntries;

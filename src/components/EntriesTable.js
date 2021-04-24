@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import helpers from "../helpers/helpers"
 
@@ -6,9 +6,6 @@ import "../styles/EntriesTable.css";
 
 const EntriesTable = ({ results }) => {
     console.log(results);
-    useEffect(() => {
-        console.log(results);
-    }, [results]);
 
     return (
         <section className="entries-table">
