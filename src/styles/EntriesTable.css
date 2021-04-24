@@ -1,0 +1,18 @@
+.entries-table {
+    padding: 1rem;
+}
+
+table {
+    padding: 30px;
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 0.4rem;
+    border: 1px solid #888;
+}
+
+th {
+    color: antiquewhite;
+    background-color: teal;
+}
