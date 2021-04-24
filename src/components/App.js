@@ -12,11 +12,20 @@ function App() {
     getEntries(setResults);
   },[]);
 
-  // console.log(results);
+  useEffect(() => {
+    console.log(results);
+  }, [results]);
+
+  console.log("App.js", results);
+
+  const updateResults = (values) => {
+    const newResults = [...results, values];
+    setResults(newResults);
+  }
 
   return (
     <div className="App">
-      <NewEntryForm />
+      <NewEntryForm updateResults={updateResults} />
       <EntriesTable results={results} />
     </div>
   );

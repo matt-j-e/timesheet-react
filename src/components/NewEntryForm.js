@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import postEntries from "../requests/postEntries";
 import PropTypes from "prop-types";
 
-const NewEntryForm = () => {
+const NewEntryForm = ({updateResults}) => {
+
+    console.log(updateResults);
 
     const [values, setValues] = useState({
         date: "",
@@ -46,6 +48,8 @@ const NewEntryForm = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         postEntries(values);
+        console.log(values);
+        updateResults(values); 
     }
 
     return (
